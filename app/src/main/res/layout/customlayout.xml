@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="38dp"
+        android:id="@+id/ivcustomlayout" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivcustomlayout"
+        android:layout_toRightOf="@+id/ivcustomlayout"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:id="@+id/txtcustomlayout1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:textSize="25sp"
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtcustomlayout2"
+        android:layout_alignBottom="@+id/ivcustomlayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/txtcustomlayout1"
+        android:layout_alignStart="@+id/txtcustomlayout1" />
+</RelativeLayout>

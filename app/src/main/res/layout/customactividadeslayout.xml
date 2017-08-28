@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Fecha a Realizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivcustomlayout"
+        android:layout_toRightOf="@+id/ivcustomlayout"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:id="@+id/txtcustomlayout1"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="38dp"
+        android:id="@+id/ivcustomlayout"
+        app:srcCompat="@drawable/postitnote"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtFecha"
+        android:layout_below="@+id/txtcustomlayout1"
+        android:layout_alignLeft="@+id/txtcustomlayout1"
+        android:layout_alignStart="@+id/txtcustomlayout1"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Tipo de Mantenimiento..:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_alignBottom="@+id/ivcustomlayout"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Codigo:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/txtFecha"
+        android:layout_alignLeft="@+id/txtFecha"
+        android:layout_alignStart="@+id/txtFecha"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:layout_below="@+id/ivcustomlayout"
+        android:layout_alignLeft="@+id/ivcustomlayout"
+        android:layout_alignStart="@+id/ivcustomlayout"
+        android:layout_marginTop="21dp"
+        android:textColor="?attr/colorAccent"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCodigo"
+        android:layout_alignBaseline="@+id/textView4"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignRight="@+id/txtcustomlayout1"
+        android:layout_alignEnd="@+id/txtcustomlayout1"
+        android:textColor="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtStatus"
+        android:textColor="@android:color/holo_green_dark"
+        android:layout_below="@+id/textView5"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/txtcustomlayout1"
+        android:layout_alignBottom="@+id/txtcustomlayout1"
+        android:layout_alignLeft="@+id/txtStatus"
+        android:layout_alignStart="@+id/txtStatus" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTipoMante"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_alignBaseline="@+id/textView6"
+        android:layout_alignBottom="@+id/textView6"
+        android:layout_alignLeft="@+id/txtStatus"
+        android:layout_alignStart="@+id/txtStatus" />
+
+    <Button
+        android:text="Captura Rerultado del Mantenimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btncaptura"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toRightOf="@+id/txtFecha" />
+
+    <TextView
+        android:textSize="24sp"
+        android:text="Descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDescripcion"
+        android:textColor="?attr/colorAccent"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:layout_below="@+id/btncaptura"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11" />
+
+</RelativeLayout>

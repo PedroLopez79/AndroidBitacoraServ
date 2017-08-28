@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000">
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Codigo:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textStyle="normal|bold"
+        android:layout_alignBottom="@+id/txtCodigo"
+        android:layout_alignLeft="@+id/textView11"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDescripcion"
+        android:textColor="@android:color/white"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:layout_below="@+id/textView11"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView11"
+        android:textColor="@android:color/white"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/txtCodigo"
+        android:layout_alignLeft="@+id/txtDescripcion"
+        android:layout_alignStart="@+id/txtDescripcion" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Tipo Mantenimiento:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/black"
+        android:textStyle="normal|bold"
+        android:layout_alignBaseline="@+id/txtCodigo"
+        android:layout_alignBottom="@+id/txtCodigo"
+        android:layout_alignLeft="@+id/txtTipoMante"
+        android:layout_alignStart="@+id/txtTipoMante" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTipoMante"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textSize="18sp"
+        android:text="Codigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCodigo"
+        android:textColor="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView11"
+        android:layout_toEndOf="@+id/textView11" />
+
+</RelativeLayout>
