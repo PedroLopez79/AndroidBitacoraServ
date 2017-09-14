@@ -28,6 +28,7 @@ import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
+import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -40,6 +41,7 @@ public class HorariosEmpleados extends AppCompatActivity {
     String IMAGE[];
     String NOMBRES[];
     String DESCRIPCION[];
+    String REFERENCIA[];
 
     String TAG = "Response";
     String ip, resultString, numestacion, turno;
@@ -161,11 +163,13 @@ public class HorariosEmpleados extends AppCompatActivity {
                     IMAGE = new String[i];
                     NOMBRES = new String[i];
                     DESCRIPCION = new String[i];
+                    REFERENCIA = new String[i];
 
                     String text = "";
                     String empleados = "";
                     String descripcion = "";
                     String foto = "";
+                    String referencia = "";
 
                     while (eventType != XmlPullParser.END_DOCUMENT) {
                         String tagname = xpp.getName();
@@ -186,6 +190,7 @@ public class HorariosEmpleados extends AppCompatActivity {
                                     NOMBRES[c] = empleados;
                                     DESCRIPCION[c] = descripcion;
                                     IMAGE[c] = foto;
+                                    REFERENCIA[c] = referencia;
                                     c++;
 
                                 } else if (tagname.equalsIgnoreCase("IDEMPLEADO")) {
@@ -197,7 +202,7 @@ public class HorariosEmpleados extends AppCompatActivity {
                                 } else if (tagname.equalsIgnoreCase("NOMBREEMPLEADO")) {
                                     empleados = empleados + text;
                                 } else if (tagname.equalsIgnoreCase("REFERENCIA")) {
-                                    //
+                                    referencia = "Referencia: "+ text;
                                 } else if (tagname.equalsIgnoreCase("FOTOBASE64")) {
                                     foto = text;
                                 }
@@ -261,12 +266,15 @@ public class HorariosEmpleados extends AppCompatActivity {
             if (NOMBRES.length > 0)
             {
             try {
-            ImageView imageview = (ImageView) convertView.findViewById(R.id.ivcustomlayout);
-            TextView textview1 = (TextView) convertView.findViewById(R.id.txtcustomlayout1);
-            TextView textview2 = (TextView) convertView.findViewById(R.id.txtcustomlayout2);
+                ImageView imageview = (ImageView) convertView.findViewById(R.id.ivcustomlayout);
+                TextView textview1 = (TextView) convertView.findViewById(R.id.txtcustomlayout1);
+                TextView textview2 = (TextView) convertView.findViewById(R.id.txtcustomlayout2);
+
+                TextView textview3 = (TextView) convertView.findViewById(R.id.textView7);
 
                 textview1.setText(NOMBRES[position].toString());
                 textview2.setText(DESCRIPCION[position].toString());
+                textview3.setText(REFERENCIA[position].toString());
                 byte[] decodeString = Base64.decode(IMAGE[position], Base64.DEFAULT);
                 Bitmap decode = BitmapFactory.decodeByteArray(decodeString, 0, decodeString.length);
                 imageview.setImageBitmap(decode);
