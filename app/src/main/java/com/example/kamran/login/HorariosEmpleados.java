@@ -270,11 +270,11 @@ public class HorariosEmpleados extends AppCompatActivity {
                 TextView textview1 = (TextView) convertView.findViewById(R.id.txtcustomlayout1);
                 TextView textview2 = (TextView) convertView.findViewById(R.id.txtcustomlayout2);
 
-                TextView textview3 = (TextView) convertView.findViewById(R.id.textView7);
+                //TextView textview3 = (TextView) convertView.findViewById(R.id.textView7);
 
                 textview1.setText(NOMBRES[position].toString());
                 textview2.setText(DESCRIPCION[position].toString());
-                textview3.setText(REFERENCIA[position].toString());
+                //textview3.setText(REFERENCIA[position].toString());
                 byte[] decodeString = Base64.decode(IMAGE[position], Base64.DEFAULT);
                 Bitmap decode = BitmapFactory.decodeByteArray(decodeString, 0, decodeString.length);
                 imageview.setImageBitmap(decode);

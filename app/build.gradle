@@ -28,7 +28,7 @@ dependencies
             //compile project(':ksoap2-android-2.5.2')
             compile project(':ksoap2-android-assembly-2.5.8-jar-with-dependencies')
             //compile project(':ksoap2-base-3.4.0')
-            compile 'com.android.support:appcompat-v7:24.2.1'
+            //compile 'com.android.support:appcompat-v7:24.2.1'
             compile 'com.android.support:design:25.1.0'
             compile 'com.android.support:support-v4:24.2.1'
             compile 'com.android.support:support-vector-drawable:24.2.1'
